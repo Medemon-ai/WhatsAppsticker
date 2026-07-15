@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free WhatsApp Sticker Maker Online | No Signup</title>
+<meta name="description" content="Turn any photo into a WhatsApp sticker free, online, no signup or watermark. Add text, crop to 512x512, export under 100KB. 100% private.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://example.com/index.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Free WhatsApp Sticker Maker Online – No Signup, No Watermark">
+<meta property="og:description" content="Convert any photo into a WhatsApp-ready sticker in your browser. Add custom text, crop to 512x512px, and export a compressed WebP file under 100KB — no account needed.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://example.com/og-image.png">
+<meta property="og:url" content="https://example.com/index.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Bangers&family=Anton&family=Permanent+Marker&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "WhatsApp Sticker Maker",
+  "description": "A free, private, browser-based tool to convert photos into WhatsApp-ready stickers. Add custom text and fonts, auto-crop to 512x512px, and export a compressed WebP under 100KB. No signup, no watermark, no upload to any server.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">✂️</span>
+      <span class="brand-name">StickerSnap</span>
+    </a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Photo → WhatsApp Sticker, in your browser</p>
+      <h1>Free WhatsApp Sticker Maker Online – No Signup, No Watermark</h1>
+      <p class="hero-sub">Upload a photo, add bold sticker text, and download a WhatsApp-ready WebP — cropped to 512×512px and compressed under 100KB. Nothing ever leaves your device.</p>
+      <div class="badge-row">
+        <span class="badge">🔒 100% private</span>
+        <span class="badge">🚫 No signup</span>
+        <span class="badge">✨ No watermark</span>
+        <span class="badge">📐 512×512px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool" id="tool" aria-label="Sticker maker tool">
+    <div class="tool-grid">
+
+      <!-- STEP 1: UPLOAD -->
+      <div class="card step-card" id="uploadCard">
+        <div class="step-label"><span class="step-num">1</span> Upload</div>
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload an image by clicking or dragging a file here">
+          <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp" hidden aria-label="Choose an image file">
+          <div class="dropzone-content" id="dropzoneContent">
+            <span class="dropzone-icon" aria-hidden="true">📷</span>
+            <p class="dropzone-text">Drag &amp; drop a photo here<br>or <span class="link-text">browse files</span></p>
+            <p class="dropzone-hint">JPG, PNG or WebP</p>
+          </div>
+          <div class="upload-preview" id="uploadPreview" hidden>
+            <img id="uploadThumb" alt="Thumbnail of your uploaded photo">
+            <p id="uploadFilename" class="upload-filename"></p>
+          </div>
+        </div>
+        <p class="upload-error" id="uploadError" role="alert" hidden></p>
+        <p class="privacy-note">🔒 Your image never leaves your device — everything happens locally in your browser.</p>
+      </div>
+
+      <!-- STEP 2: EDIT / PREVIEW -->
+      <div class="card step-card canvas-card" id="editCard">
+        <div class="step-label"><span class="step-num">2</span> Customize</div>
+
+        <div class="canvas-wrap">
+          <canvas id="stickerCanvas" width="512" height="512" aria-label="Live sticker preview"></canvas>
+          <p class="canvas-placeholder" id="canvasPlaceholder">Your sticker preview will appear here after you upload a photo</p>
+        </div>
+
+        <div class="controls" id="controls">
+          <div class="control-group">
+            <label for="textInput">Sticker text</label>
+            <textarea id="textInput" rows="2" placeholder="Type your caption... (supports multiple lines)"></textarea>
+          </div>
+
+          <div class="control-row">
+            <div class="control-group">
+              <label for="fontSelect">Font</label>
+              <select id="fontSelect">
+                <option value="'Bangers', cursive" style="font-family:'Bangers',cursive;">Bangers (meme)</option>
+                <option value="'Anton', sans-serif" style="font-family:'Anton',sans-serif;">Anton (bold impact)</option>
+                <option value="'Permanent Marker', cursive" style="font-family:'Permanent Marker',cursive;">Permanent Marker</option>
+                <option value="'Poppins', sans-serif" style="font-family:'Poppins',sans-serif;">Poppins (clean)</option>
+                <option value="'Inter', sans-serif" style="font-family:'Inter',sans-serif;">Inter (clean)</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="colorInput">Text color</label>
+              <input type="color" id="colorInput" value="#ffffff">
+            </div>
+          </div>
+
+          <div class="control-row">
+            <div class="control-group">
+              <label for="sizeSlider">Font size: <span id="sizeValue">40</span>px</label>
+              <input type="range" id="sizeSlider" min="20" max="80" value="40">
+            </div>
+            <div class="control-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="strokeToggle" checked>
+                Outline text (for readability)
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <span class="control-title">Position</span>
+            <div class="position-buttons">
+              <button type="button" class="pos-btn" data-pos="top">Top</button>
+              <button type="button" class="pos-btn active" data-pos="center">Center</button>
+              <button type="button" class="pos-btn" data-pos="bottom">Bottom</button>
+            </div>
+          </div>
+
+          <div class="layer-actions">
+            <button type="button" class="btn btn-secondary" id="addLayerBtn">+ Add another text layer</button>
+          </div>
+
+          <div class="control-group">
+            <span class="control-title">Text layers</span>
+            <ul class="layer-list" id="layerList"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: EXPORT -->
+      <div class="card step-card export-card" id="exportCard">
+        <div class="step-label"><span class="step-num">3</span> Download</div>
+        <p class="export-copy">Exports as WebP, auto-compressed to fit under WhatsApp's 100KB sticker limit.</p>
+        <button type="button" class="btn btn-primary btn-large" id="downloadBtn" disabled>Download sticker.webp</button>
+        <p class="export-status" id="exportStatus" aria-live="polite"></p>
+        <button type="button" class="btn btn-ghost" id="resetBtn">Reset &amp; start over</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="seo-content">
+    <div class="seo-inner">
+
+      <h2>How to Make a WhatsApp Sticker</h2>
+      <ol class="how-to-list">
+        <li><strong>Upload a photo.</strong> Drag and drop a JPG, PNG, or WebP image into the upload box above, or click to browse your files.</li>
+        <li><strong>Customize it.</strong> The tool automatically crops your photo into a 512×512px square. Add one or more text layers, pick a font, color, and position, and toggle an outline for readability.</li>
+        <li><strong>Download.</strong> Click "Download sticker.webp" — the tool compresses your image to WebP format under 100KB, which is WhatsApp's sticker size requirement.</li>
+        <li><strong>Add it to WhatsApp.</strong> Use a sticker-pack app such as Sticker Maker or Sticker.ly to import your downloaded WebP file into WhatsApp as a custom sticker pack.</li>
+      </ol>
+
+      <h2>WhatsApp Sticker Size Requirements</h2>
+      <p>WhatsApp stickers must be square images sized exactly 512×512 pixels, saved in WebP format, and kept under 100KB per sticker. This tool handles all three requirements automatically: it crops your photo to a perfect square, exports it as WebP, and compresses the file until it fits comfortably under the 100KB limit.</p>
+
+      <h2>Is This Tool Free and Private?</h2>
+      <p>Yes — this sticker maker is completely free to use, with no signup, no watermark, and no hidden limits. It's also private by design: your photo is processed entirely inside your own browser using the Canvas API. There's no upload, no server, and no tracking script involved at any point, so your image never leaves your device.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>What image formats can I upload?</h3>
+          <p>You can upload JPG, PNG, or WebP photos. The tool automatically fits and crops them into the 512×512px square that WhatsApp requires for stickers.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is there a file size limit for my sticker?</h3>
+          <p>WhatsApp requires each sticker to be under 100KB. This tool compresses your exported WebP automatically to stay under that limit, and shows a warning if an extremely detailed image can't be compressed enough.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need to sign up or install an app?</h3>
+          <p>No. This is a free, browser-based tool — there's no account, no signup form, and nothing to install. Just upload, customize, and download.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will my sticker have a watermark?</h3>
+          <p>No. Every sticker you create and download is watermark-free, full resolution, and yours to use however you like.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <p class="footer-copy">© 2026 StickerSnap. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+          </html>
+          
