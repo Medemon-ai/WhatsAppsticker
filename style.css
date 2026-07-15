@@ -401,6 +401,15 @@ img { max-width: 100%; display: block; }
   margin: 0;
 }
 
+/* The [hidden] attribute normally sets display:none, but the display:flex
+   rule above (same specificity, author stylesheet) was winning the cascade
+   and keeping this placeholder visible forever, blocking the canvas
+   underneath. This rule forces it to actually disappear once the JS
+   sets canvasPlaceholder.hidden = true. */
+.canvas-placeholder[hidden] {
+  display: none;
+}
+
 .controls { display: flex; flex-direction: column; gap: 16px; }
 
 .control-group { display: flex; flex-direction: column; gap: 6px; }
@@ -680,5 +689,4 @@ input[type="color"] {
 @media (max-width: 480px) {
   .control-row { grid-template-columns: 1fr; }
   .hero { padding: 36px 16px 24px; }
-  }
-  
+}
