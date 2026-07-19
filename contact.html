@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact StickerSnap | Feedback, Bugs &amp; Business Inquiries</title>
+<meta name="description" content="Get in touch with StickerSnap for bug reports, feature suggestions, feedback, or business inquiries. We usually reply within a day or two.">
+<meta name="keywords" content="Contact StickerSnap, WhatsApp Sticker Maker support, sticker maker feedback, feature request">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://example.com/contact.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Contact StickerSnap | Feedback, Bugs &amp; Business Inquiries">
+<meta property="og:description" content="Have a bug report, feature idea, or business inquiry? Reach the StickerSnap team directly.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://example.com/og-image.png">
+<meta property="og:url" content="https://example.com/contact.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact StickerSnap">
+<meta name="twitter:description" content="Get in touch for bug reports, feedback, or business inquiries.">
+<meta name="twitter:image" content="https://example.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Bangers&family=Anton&family=Permanent+Marker&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StickerSnap",
+  "url": "https://example.com/",
+  "logo": "https://example.com/og-image.png",
+  "email": "lordabhi737@gmail.com"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://example.com/contact.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">✂️</span>
+      <span class="brand-name">StickerSnap</span>
+    </a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Get In Touch</p>
+      <h1>Contact StickerSnap</h1>
+      <p class="hero-sub">Found a bug? Have an idea to make StickerSnap better? Or a business inquiry? We'd love to hear from you — drop us a message below or email us directly.</p>
+      <div class="badge-row">
+        <span class="badge">🐞 Bug reports</span>
+        <span class="badge">💡 Suggestions</span>
+        <span class="badge">🤝 Business inquiries</span>
+        <span class="badge">🙌 Feature requests</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="tool" aria-label="Contact form section">
+    <div class="tool-grid" style="grid-template-columns: 1fr; max-width: 640px; margin: 0 auto;">
+
+      <div class="card">
+        <div class="step-label"><span class="step-num">✉</span> Send a Message</div>
+
+        <!-- NOTE: This form has no backend attached yet. Connect it to a service
+             such as Formspree, Netlify Forms, EmailJS, or your own server endpoint
+             by setting the `action` attribute below and using method="POST". -->
+        <form id="contactForm" action="#" method="POST" novalidate>
+
+          <div class="control-group" style="margin-bottom:16px;">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" name="name" placeholder="Your name" required minlength="2" autocomplete="name">
+          </div>
+
+          <div class="control-group" style="margin-bottom:16px;">
+            <label for="emailInput">Email</label>
+            <input type="email" id="emailInput" name="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+
+          <div class="control-group" style="margin-bottom:16px;">
+            <label for="subjectInput">Subject</label>
+            <select id="subjectInput" name="subject" required>
+              <option value="" disabled selected>Choose a topic</option>
+              <option value="bug">Bug report</option>
+              <option value="suggestion">Suggestion / feature request</option>
+              <option value="feedback">General feedback</option>
+              <option value="business">Business inquiry</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="control-group" style="margin-bottom:20px;">
+            <label for="messageInput">Message</label>
+            <textarea id="messageInput" name="message" rows="5" placeholder="Tell us what's on your mind..." required minlength="10"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large" id="submitBtn">Send Message</button>
+
+          <!-- Success / error placeholders (shown/hidden via JS once a backend is connected) -->
+          <p class="export-status" id="formSuccess" role="status" hidden>✅ Thanks — your message has been sent. We'll get back to you soon.</p>
+          <p class="upload-error" id="formError" role="alert" hidden>⚠️ Something went wrong sending your message. Please try again or email us directly.</p>
+        </form>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <div class="step-label" style="justify-content:center;"><span class="step-num">📧</span> Prefer Email?</div>
+        <p class="privacy-note" style="font-size:0.95rem;">You can reach us anytime at</p>
+        <p style="margin:0;"><a href="mailto:lordabhi737@gmail.com" style="font-family: var(--font-mono); font-weight:700;">lordabhi737@gmail.com</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="seo-content">
+    <div class="seo-inner">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>How quickly will I get a reply?</h3>
+          <p>We aim to respond to all messages, including bug reports and feature requests, within a day or two.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I request a new feature?</h3>
+          <p>Absolutely. Select "Suggestion / feature request" in the form above, or email us directly at lordabhi737@gmail.com.</p>
+        </div>
+        <div class="faq-item">
+          <h3>I found a bug — what should I include in my report?</h3>
+          <p>Please describe what you were doing, what you expected to happen, and what happened instead. Screenshots help a lot too.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <p class="footer-copy">© 2026 StickerSnap. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
+                                                                                                                                       </html>
+                                                                                                                                       
