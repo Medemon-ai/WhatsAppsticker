@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STICKERSNAP — app.js
+   SNAPASTICKER — app.js
    100% client-side. No fetch(), no XMLHttpRequest, no analytics.
    Everything below runs on the Canvas API inside the user's own browser.
    ========================================================================== */
@@ -476,4 +476,4 @@
   }
 
 })();
-        
+     
