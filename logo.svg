@@ -1,0 +1,38 @@
+<svg width="360" height="120" viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .icon-bg { fill: #EAF6EF; stroke: #1FA97A; stroke-width: 3; stroke-dasharray: 6 5; }
+      .peel-fill { fill: #FFFFFF; }
+      .peel-edge { fill: none; stroke: #1FA97A; stroke-width: 3; stroke-dasharray: 6 5; }
+      .wordmark { font-family: 'Baloo 2', 'Segoe UI', system-ui, sans-serif; font-weight: 700; }
+      .tagline { font-family: 'Space Mono', monospace; letter-spacing: 2px; }
+    </style>
+  </defs>
+
+  <!-- Icon: die-cut sticker square with peeled corner -->
+  <g transform="translate(12,10)">
+    <path class="icon-bg"
+      d="M14 0 H74 A14 14 0 0 1 88 14 V64 L64 88 H14
+         A14 14 0 0 1 0 74 V14 A14 14 0 0 1 14 0 Z" />
+    <path class="peel-fill" d="M88 64 L64 88 L64 64 Z" />
+    <path class="peel-edge" d="M88 64 L64 88" />
+
+    <!-- camera body -->
+    <rect x="16" y="30" width="56" height="38" rx="8" fill="#14231C" />
+    <rect x="30" y="22" width="20" height="12" rx="4" fill="#14231C" />
+    <!-- lens -->
+    <circle cx="44" cy="49" r="14" fill="#EAF6EF" />
+    <circle cx="44" cy="49" r="9" fill="#1FA97A" />
+    <circle cx="44" cy="49" r="4" fill="#14231C" />
+    <!-- snap flash / shutter spark -->
+    <circle cx="64" cy="34" r="5" fill="#FF5A5F" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="118" y="58" class="wordmark" font-size="34" fill="#14231C">Snap</text>
+  <text x="118" y="58" class="wordmark" font-size="34" fill="#FF5A5F" dx="63">A</text>
+  <text x="118" y="58" class="wordmark" font-size="34" fill="#14231C" dx="82">Sticker</text>
+
+  <!-- Tagline -->
+  <text x="120" y="80" class="tagline" font-size="12" fill="#4A5C53">FREE &#183; PRIVATE &#183; INSTANT</text>
+</svg>
