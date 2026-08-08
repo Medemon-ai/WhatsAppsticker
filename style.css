@@ -90,8 +90,11 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
 }
 
-.brand-mark { font-size: 1.3rem; }
-.brand-name { letter-spacing: -0.02em; }
+.brand-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
 
 /* Hamburger */
 .hamburger {
@@ -689,4 +692,4 @@ input[type="color"] {
 @media (max-width: 480px) {
   .control-row { grid-template-columns: 1fr; }
   .hero { padding: 36px 16px 24px; }
-}
+   }
